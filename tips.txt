@@ -1,0 +1,45 @@
+"""
+http://apiadvisor.climatempo.com.br/doc/index.html
+https://flask-sqlalchemy.palletsprojects.com/en/2.x/quickstart/
+
+from app import db
+db.create_all()
+
+from app import db, create_app
+def create_app():
+    app = Flask(__name__)
+    db.init_app(app)
+    return app
+db.create_all(app=create_app())
+"""
+
+# /cidade?id=3477
+# http://apiadvisor.climatempo.com.br/api/v1/forecast/locale/3477/days/15?token=b22460a8b91ac5f1d48f5b7029891b53
+
+# virtualenv env
+# env\Scripts\activate.bat
+#
+# python3 -m venv env
+# source env/bin/activate
+
+# flask, flask_sqlalchemy, gunicorn
+# pip install -r requirements.txt
+# pip freeze > requirements.txt
+
+# settings.json
+# "python.linting.pylintArgs": ["--load-plugins", "pylint-flask"]
+
+# git init
+# git add .
+# git commit -m "first commit"
+# git remote add origin https://github.com/AlessandraMayumi/flaskFreeCodeCamp.git
+# git remote -v
+# git push origin master
+
+# download heroku cli
+# heroku login
+# heroku create alemmsambareva
+
+# docker build -t flaskimage
+# docker run -d --name flaskcontainer -p 5000:5000 flaskimage
+# docker run -it flaskimage

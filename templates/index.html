@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %} <h1>Clima Tempo</h1> {% endblock %}
+
+
+{% block body %}
+<div class="content" style="text-align:center">
+    <table>
+        <tr>
+            <th>
+                <a action="/reorder/name">Cidade</a>
+            </th>
+            <th>Estado</th>
+            <th>País</th>
+            <th>Data</th>
+            <th>Probabilidade<br> de Chuva</th>
+            <th>Precipitação</th>
+            <th>Mínima de <br> Temperatura</th>
+            <th>Máxima de <br> Temperatura</th>
+        </tr>
+        {% for task in tasks %}    
+            <tr>
+                <td>{{ task.name }}</td>
+                <td>{{ task.state }}</td>
+                <td>{{ task.country }}</td>
+                <td>{{ task.date }}</td>
+                <td>{{ task.probability }}</td>
+                <td>{{ task.precipitation }}</td>
+                <td>{{ task.temp_min }}</td>
+                <td>{{ task.temp_max }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
